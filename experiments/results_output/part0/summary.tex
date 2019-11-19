@@ -1,0 +1,68 @@
+\documentclass{article}
+\usepackage{multirow}
+\usepackage{booktabs}
+\begin{document}
+\begin{table}[htbp]
+\caption{Add caption}\begin{tabular}{rrrrrrrr}
+\toprule
+Algorithm & \multicolumn{2}{r}{Measure}& kddcup_smtp& kddcup_combined& kddcup_binary& kddcup_http& AVG\\
+\midrule
+\multirow{6}[6]{*}{moa.classifiers.lazy.kNN}&\multirow{2}[4]{*}{evaluation time (cpu seconds)} & mean & 89.77 & 593.32 & 5107.74 & 516.07& 1576.73\\
+ & & std & 52.71 & 334.33 & 3242.89 & 307.04 & -\\
+&\multirow{2}[4]{*}{AUC} & mean & 0.87 & 0.94 & 0.99 & 0.95& 0.94\\
+ & & std & 0.18 & 0.14 & 0.05 & 0.13 & -\\
+&\multirow{2}[4]{*}{Accuracy} & mean & 1.00 & 1.00 & 1.00 & 1.00& 1.00\\
+ & & std & 0.00 & 0.00 & 0.00 & 0.00 & -\\
+\multirow{6}[6]{*}{moa.classifiers.meta.OzaBoost -s 5}&\multirow{2}[4]{*}{evaluation time (cpu seconds)} & mean & 3.48 & 62.62 & 3036.15 & 25.28& 781.88\\
+ & & std & 2.54 & 48.73 & 2410.14 & 27.17 & -\\
+&\multirow{2}[4]{*}{AUC} & mean & 0.96 & 0.99 & 1.00 & 0.98& 0.98\\
+ & & std & 0.09 & 0.05 & 0.02 & 0.08 & -\\
+&\multirow{2}[4]{*}{Accuracy} & mean & 1.00 & 1.00 & 1.00 & 1.00& 1.00\\
+ & & std & 0.00 & 0.00 & 0.00 & 0.00 & -\\
+\multirow{6}[6]{*}{moa.classifiers.functions.SGD}&\multirow{2}[4]{*}{evaluation time (cpu seconds)} & mean & 1.16 & 5.27 & 35.32 & 4.60& 11.59\\
+ & & std & 0.41 & 2.64 & 22.32 & 2.32 & -\\
+&\multirow{2}[4]{*}{AUC} & mean & 0.80 & 0.86 & 0.94 & 0.96& 0.89\\
+ & & std & 0.28 & 0.25 & 0.18 & 0.13 & -\\
+&\multirow{2}[4]{*}{Accuracy} & mean & 0.87 & 0.79 & 0.88 & 1.00& 0.88\\
+ & & std & 0.31 & 0.18 & 0.26 & 0.00 & -\\
+\multirow{6}[6]{*}{moa.classifiers.lazy.kNN -k 15}&\multirow{2}[4]{*}{evaluation time (cpu seconds)} & mean & 83.02 & 630.85 & 5295.59 & 519.30& 1632.19\\
+ & & std & 48.25 & 366.72 & 3274.26 & 303.16 & -\\
+&\multirow{2}[4]{*}{AUC} & mean & 0.87 & 0.94 & 0.99 & 0.95& 0.94\\
+ & & std & 0.18 & 0.14 & 0.05 & 0.13 & -\\
+&\multirow{2}[4]{*}{Accuracy} & mean & 1.00 & 1.00 & 1.00 & 1.00& 1.00\\
+ & & std & 0.00 & 0.00 & 0.00 & 0.00 & -\\
+\multirow{6}[6]{*}{moa.classifiers.trees.HoeffdingTree}&\multirow{2}[4]{*}{evaluation time (cpu seconds)} & mean & 0.87 & 9.51 & 208.26 & 6.59& 56.31\\
+ & & std & 0.53 & 6.07 & 139.74 & 4.53 & -\\
+&\multirow{2}[4]{*}{AUC} & mean & 0.90 & 0.99 & 1.00 & 0.99& 0.97\\
+ & & std & 0.15 & 0.07 & 0.03 & 0.06 & -\\
+&\multirow{2}[4]{*}{Accuracy} & mean & 1.00 & 1.00 & 1.00 & 1.00& 1.00\\
+ & & std & 0.00 & 0.00 & 0.00 & 0.00 & -\\
+\multirow{6}[6]{*}{moa.classifiers.trees.HoeffdingAdaptiveTree}&\multirow{2}[4]{*}{evaluation time (cpu seconds)} & mean & 1.38 & 8.74 & 76.07 & 7.00& 23.29\\
+ & & std & 0.83 & 5.20 & 43.68 & 4.20 & -\\
+&\multirow{2}[4]{*}{AUC} & mean & 0.91 & 0.96 & 0.99 & 0.97& 0.96\\
+ & & std & 0.14 & 0.11 & 0.04 & 0.10 & -\\
+&\multirow{2}[4]{*}{Accuracy} & mean & 1.00 & 1.00 & 1.00 & 1.00& 1.00\\
+ & & std & 0.00 & 0.00 & 0.00 & 0.00 & -\\
+\multirow{6}[6]{*}{moa.classifiers.meta.OzaBoost -s 15}&\multirow{2}[4]{*}{evaluation time (cpu seconds)} & mean & 10.68 & 64.60 & 99.49 & 76.41& 62.80\\
+ & & std & 7.83 & 44.92 & 96.31 & 86.16 & -\\
+&\multirow{2}[4]{*}{AUC} & mean & 0.94 & 0.98 & 0.99 & 0.97& 0.97\\
+ & & std & 0.16 & 0.09 & 0.07 & 0.09 & -\\
+&\multirow{2}[4]{*}{Accuracy} & mean & 0.81 & 0.95 & 0.98 & 0.72& 0.87\\
+ & & std & 0.37 & 0.21 & 0.14 & 0.44 & -\\
+\multirow{6}[6]{*}{moa.classifiers.lazy.kNN -k 5}&\multirow{2}[4]{*}{evaluation time (cpu seconds)} & mean & 95.82 & 605.75 & 5067.50 & 505.00& 1568.52\\
+ & & std & 57.16 & 339.73 & 3219.44 & 294.58 & -\\
+&\multirow{2}[4]{*}{AUC} & mean & 0.87 & 0.94 & 0.99 & 0.95& 0.94\\
+ & & std & 0.19 & 0.14 & 0.05 & 0.13 & -\\
+&\multirow{2}[4]{*}{Accuracy} & mean & 1.00 & 1.00 & 1.00 & 1.00& 1.00\\
+ & & std & 0.00 & 0.00 & 0.00 & 0.00 & -\\
+\multirow{6}[6]{*}{moa.classifiers.meta.OzaBoost}&\multirow{2}[4]{*}{evaluation time (cpu seconds)} & mean & 7.34 & 203.14 & 255.56 & 51.74& 129.45\\
+ & & std & 5.33 & 191.65 & 251.97 & 57.19 & -\\
+&\multirow{2}[4]{*}{AUC} & mean & 0.93 & 0.98 & 0.99 & 0.99& 0.97\\
+ & & std & 0.17 & 0.10 & 0.05 & 0.06 & -\\
+&\multirow{2}[4]{*}{Accuracy} & mean & 0.81 & 0.97 & 0.98 & 0.72& 0.87\\
+ & & std & 0.37 & 0.15 & 0.12 & 0.44 & -\\
+\bottomrule
+\end{tabular}%
+\label{tab:addlabel}%
+\end{table}%
+\end{document}

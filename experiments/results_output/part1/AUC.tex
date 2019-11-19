@@ -1,0 +1,18 @@
+\documentclass{article}
+\usepackage{multirow}
+\usepackage{booktabs}
+\begin{document}
+\begin{table}[htbp]
+\caption{Add caption}\begin{tabular}{rrrrrrrr}
+\toprule
+Algorithm& moa.classifiers.meta.AdaptiveRandomForest -s 20& moa.classifiers.meta.WeightedMajorityAlgorithm -l functions.SGD,meta.AdaptiveRandomForest& moa.classifiers.meta.AdaptiveRandomForest -s 30& moa.classifiers.meta.WeightedMajorityAlgorithm -l functions.SGD,trees.HoeffdingAdaptiveTree& moa.classifiers.meta.WeightedMajorityAlgorithm -l trees.HoeffdingAdaptiveTree,meta.AdaptiveRandomForest& moa.classifiers.meta.OzaBoost -l trees.HoeffdingAdaptiveTree -s 5& moa.classifiers.meta.AdaptiveRandomForest\\
+\midrule
+kddcup_smtp&0.98$\,\pm$0.08&0.98$\,\pm$0.08&0.98$\,\pm$0.08&0.93$\,\pm$0.14&0.98$\,\pm$0.05&0.97$\,\pm$0.06&0.97$\,\pm$0.08\\
+kddcup_combined&1.00$\,\pm$0.03&0.97$\,\pm$0.11&0.99$\,\pm$0.07&0.94$\,\pm$0.15&0.98$\,\pm$0.09&0.99$\,\pm$0.06&0.98$\,\pm$0.09\\
+kddcup_binary&1.00$\,\pm$0.03&1.00$\,\pm$0.03&1.00$\,\pm$0.03&0.99$\,\pm$0.04&1.00$\,\pm$0.02&0.99$\,\pm$0.05&1.00$\,\pm$0.03\\
+kddcup_http&0.99$\,\pm$0.07&0.98$\,\pm$0.10&0.98$\,\pm$0.09&0.97$\,\pm$0.10&0.98$\,\pm$0.10&0.98$\,\pm$0.09&0.98$\,\pm$0.10\\
+\bottomrule
+\end{tabular}%
+\label{tab:addlabel}%
+\end{table}%
+\end{document}

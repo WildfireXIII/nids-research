@@ -1,0 +1,18 @@
+\documentclass{article}
+\usepackage{multirow}
+\usepackage{booktabs}
+\begin{document}
+\begin{table}[htbp]
+\caption{Add caption}\begin{tabular}{rrrrrrrrrr}
+\toprule
+Algorithm& moa.classifiers.lazy.kNN& moa.classifiers.meta.OzaBoost -s 5& moa.classifiers.functions.SGD& moa.classifiers.lazy.kNN -k 15& moa.classifiers.trees.HoeffdingTree& moa.classifiers.trees.HoeffdingAdaptiveTree& moa.classifiers.meta.OzaBoost -s 15& moa.classifiers.lazy.kNN -k 5& moa.classifiers.meta.OzaBoost\\
+\midrule
+kddcup_smtp&89.77$\,\pm$52.71&3.48$\,\pm$2.54&1.16$\,\pm$0.41&83.02$\,\pm$48.25&0.87$\,\pm$0.53&1.38$\,\pm$0.83&10.68$\,\pm$7.83&95.82$\,\pm$57.16&7.34$\,\pm$5.33\\
+kddcup_combined&593.32$\,\pm$334.33&62.62$\,\pm$48.73&5.27$\,\pm$2.64&630.85$\,\pm$366.72&9.51$\,\pm$6.07&8.74$\,\pm$5.20&64.60$\,\pm$44.92&605.75$\,\pm$339.73&203.14$\,\pm$191.65\\
+kddcup_binary&5107.74$\,\pm$3242.89&3036.15$\,\pm$2410.14&35.32$\,\pm$22.32&5295.59$\,\pm$3274.26&208.26$\,\pm$139.74&76.07$\,\pm$43.68&99.49$\,\pm$96.31&5067.50$\,\pm$3219.44&255.56$\,\pm$251.97\\
+kddcup_http&516.07$\,\pm$307.04&25.28$\,\pm$27.17&4.60$\,\pm$2.32&519.30$\,\pm$303.16&6.59$\,\pm$4.53&7.00$\,\pm$4.20&76.41$\,\pm$86.16&505.00$\,\pm$294.58&51.74$\,\pm$57.19\\
+\bottomrule
+\end{tabular}%
+\label{tab:addlabel}%
+\end{table}%
+\end{document}

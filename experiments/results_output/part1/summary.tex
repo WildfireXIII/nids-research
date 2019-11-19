@@ -1,0 +1,56 @@
+\documentclass{article}
+\usepackage{multirow}
+\usepackage{booktabs}
+\begin{document}
+\begin{table}[htbp]
+\caption{Add caption}\begin{tabular}{rrrrrrrr}
+\toprule
+Algorithm & \multicolumn{2}{r}{Measure}& kddcup_smtp& kddcup_combined& kddcup_binary& kddcup_http& AVG\\
+\midrule
+\multirow{6}[6]{*}{moa.classifiers.meta.AdaptiveRandomForest -s 20}&\multirow{2}[4]{*}{evaluation time (cpu seconds)} & mean & 5.53 & 67.61 & 690.58 & 29.88& 198.40\\
+ & & std & 4.05 & 42.49 & 456.85 & 20.97 & -\\
+&\multirow{2}[4]{*}{AUC} & mean & 0.98 & 1.00 & 1.00 & 0.99& 0.99\\
+ & & std & 0.08 & 0.03 & 0.03 & 0.07 & -\\
+&\multirow{2}[4]{*}{Accuracy} & mean & 1.00 & 1.00 & 1.00 & 1.00& 1.00\\
+ & & std & 0.00 & 0.00 & 0.00 & 0.00 & -\\
+\multirow{6}[6]{*}{moa.classifiers.meta.WeightedMajorityAlgorithm -l functions.SGD,meta.AdaptiveRandomForest}&\multirow{2}[4]{*}{evaluation time (cpu seconds)} & mean & 4.17 & 44.39 & 553.12 & 19.99& 155.42\\
+ & & std & 2.85 & 26.03 & 389.22 & 13.22 & -\\
+&\multirow{2}[4]{*}{AUC} & mean & 0.98 & 0.97 & 1.00 & 0.98& 0.98\\
+ & & std & 0.08 & 0.11 & 0.03 & 0.10 & -\\
+&\multirow{2}[4]{*}{Accuracy} & mean & 1.00 & 1.00 & 1.00 & 1.00& 1.00\\
+ & & std & 0.00 & 0.00 & 0.00 & 0.00 & -\\
+\multirow{6}[6]{*}{moa.classifiers.meta.AdaptiveRandomForest -s 30}&\multirow{2}[4]{*}{evaluation time (cpu seconds)} & mean & 9.63 & 109.87 & 849.01 & 57.09& 256.40\\
+ & & std & 7.00 & 65.29 & 533.30 & 40.20 & -\\
+&\multirow{2}[4]{*}{AUC} & mean & 0.98 & 0.99 & 1.00 & 0.98& 0.99\\
+ & & std & 0.08 & 0.07 & 0.03 & 0.09 & -\\
+&\multirow{2}[4]{*}{Accuracy} & mean & 1.00 & 1.00 & 1.00 & 1.00& 1.00\\
+ & & std & 0.00 & 0.00 & 0.00 & 0.00 & -\\
+\multirow{6}[6]{*}{moa.classifiers.meta.WeightedMajorityAlgorithm -l functions.SGD,trees.HoeffdingAdaptiveTree}&\multirow{2}[4]{*}{evaluation time (cpu seconds)} & mean & 1.61 & 11.16 & 107.48 & 8.45& 32.18\\
+ & & std & 0.98 & 6.55 & 59.11 & 5.24 & -\\
+&\multirow{2}[4]{*}{AUC} & mean & 0.93 & 0.94 & 0.99 & 0.97& 0.96\\
+ & & std & 0.14 & 0.15 & 0.04 & 0.10 & -\\
+&\multirow{2}[4]{*}{Accuracy} & mean & 1.00 & 1.00 & 1.00 & 1.00& 1.00\\
+ & & std & 0.00 & 0.00 & 0.00 & 0.00 & -\\
+\multirow{6}[6]{*}{moa.classifiers.meta.WeightedMajorityAlgorithm -l trees.HoeffdingAdaptiveTree,meta.AdaptiveRandomForest}&\multirow{2}[4]{*}{evaluation time (cpu seconds)} & mean & 4.56 & 55.59 & 644.04 & 25.20& 182.35\\
+ & & std & 3.32 & 32.95 & 395.56 & 17.72 & -\\
+&\multirow{2}[4]{*}{AUC} & mean & 0.98 & 0.98 & 1.00 & 0.98& 0.99\\
+ & & std & 0.05 & 0.09 & 0.02 & 0.10 & -\\
+&\multirow{2}[4]{*}{Accuracy} & mean & 1.00 & 1.00 & 1.00 & 1.00& 1.00\\
+ & & std & 0.00 & 0.00 & 0.00 & 0.00 & -\\
+\multirow{6}[6]{*}{moa.classifiers.meta.OzaBoost -l trees.HoeffdingAdaptiveTree -s 5}&\multirow{2}[4]{*}{evaluation time (cpu seconds)} & mean & 4.74 & 41.41 & 485.90 & 15.62& 136.92\\
+ & & std & 2.86 & 24.22 & 345.98 & 11.19 & -\\
+&\multirow{2}[4]{*}{AUC} & mean & 0.97 & 0.99 & 0.99 & 0.98& 0.98\\
+ & & std & 0.06 & 0.06 & 0.05 & 0.09 & -\\
+&\multirow{2}[4]{*}{Accuracy} & mean & 1.00 & 1.00 & 1.00 & 1.00& 1.00\\
+ & & std & 0.00 & 0.00 & 0.00 & 0.00 & -\\
+\multirow{6}[6]{*}{moa.classifiers.meta.AdaptiveRandomForest}&\multirow{2}[4]{*}{evaluation time (cpu seconds)} & mean & 3.26 & 32.72 & 378.15 & 17.57& 107.93\\
+ & & std & 2.39 & 18.95 & 260.56 & 11.46 & -\\
+&\multirow{2}[4]{*}{AUC} & mean & 0.97 & 0.98 & 1.00 & 0.98& 0.98\\
+ & & std & 0.08 & 0.09 & 0.03 & 0.10 & -\\
+&\multirow{2}[4]{*}{Accuracy} & mean & 1.00 & 1.00 & 1.00 & 1.00& 1.00\\
+ & & std & 0.00 & 0.00 & 0.00 & 0.00 & -\\
+\bottomrule
+\end{tabular}%
+\label{tab:addlabel}%
+\end{table}%
+\end{document}

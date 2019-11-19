@@ -61,8 +61,30 @@ col_names <- c("duration", "protocol_type", "service", "flag", "src_bytes", "dst
                "count", "srv_count", "serror_rate", "srv_serror_rate", "rerror_rate", "srv_rerror_rate", "same_srv_rate", "diff_srv_rate", "srv_diff_host_rate",
                "dst_host_count", "dst_host_srv_count", "dst_host_same_srv_rate", "dst_host_diff_srv_rate",
                "dst_host_same_src_port_rate", "dst_host_srv_diff_host_rate", "dst_host_serror_rate",
-               "dst_host_srv_serror_rate", "dst_host_rerror_rate", "dst_host_srv_rerror_rate", "target")
+               "dst_host_srv_serror_rate", "dst_host_rerror_rate", "dst_host_srv_rerror_rate", "class")
 
 names(df) <- col_names
 
-write.arff(df, "../data/raw/kddcup/kddcup.arff")
+
+anomalyze <- function(x) {
+  if (x == "normal.") {
+    return("normal")
+  }
+  else {
+    return("anomaly")
+  }
+}
+df$class <- as.factor(sapply(df$class, anomalyze))
+
+df.http <- df[df$service=="http",]
+df.smtp <- df[df$service=="smtp",]
+df.combined <- rbind(df.smtp, df.http)
+
+
+
+write.arff(df, "../data/raw/kddcup/kddcup_binary.arff")
+write.arff(df.http, "../data/raw/kddcup/kddcup_http.arff")
+write.arff(df.smtp, "../data/raw/kddcup/kddcup_smtp.arff")
+write.arff(df.combined, "../data/raw/kddcup/kddcup_combined.arff")
+
+write.arff(df[1:125973,], "../data/raw/kddcup/kddcup_binary_sample.arff")

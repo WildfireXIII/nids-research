@@ -1,0 +1,67 @@
+\documentclass{article}
+\usepackage[latin9]{inputenc}
+\usepackage{array}
+\usepackage{rotfloat}
+\usepackage{multirow}
+
+\makeatletter
+\providecommand{\tabularnewline}{\\}
+\usepackage{multirow}
+\usepackage{booktabs}
+\makeatother
+
+\begin{document}
+\begin{sidewaystable}
+\centering \caption{Add caption}
+\begin{tabular}{|r|r|rrrrrr|r|r|r|r|r|r|r|r|r|r|r|r|r|}
+\hline
+\multirow{2}{*}{Algorithm } & \multirow{2}{*}{PM} &\multicolumn{3}{r|}{moa.classifiers.meta.WeightedMajorityAlgorithm -l functions.SGD,meta.AdaptiveRandomForest} & \multicolumn{3}{r|}{moa.classifiers.meta.AdaptiveRandomForest -s 30} & \multicolumn{3}{r|}{moa.classifiers.meta.WeightedMajorityAlgorithm -l functions.SGD,trees.HoeffdingAdaptiveTree} & \multicolumn{3}{r|}{moa.classifiers.meta.WeightedMajorityAlgorithm -l trees.HoeffdingAdaptiveTree,meta.AdaptiveRandomForest} & \multicolumn{3}{r|}{moa.classifiers.meta.OzaBoost -l trees.HoeffdingAdaptiveTree -s 5} & \multicolumn{3}{r|}{moa.classifiers.meta.AdaptiveRandomForest}& \multirow{2}{*}{AVG}\tabularnewline
+\cline{3-20}
+ & & \multicolumn{1}{r|}{W} & \multicolumn{1}{r|}{L} & \multicolumn{1}{r|}{T} & \multicolumn{1}{r|}{W} & \multicolumn{1}{r|}{L} & \multicolumn{1}{r|}{T} & \multicolumn{1}{r|}{W} & \multicolumn{1}{r|}{L} & \multicolumn{1}{r|}{T} & \multicolumn{1}{r|}{W} & \multicolumn{1}{r|}{L} & \multicolumn{1}{r|}{T} & \multicolumn{1}{r|}{W} & \multicolumn{1}{r|}{L} & \multicolumn{1}{r|}{T} & \multicolumn{1}{r|}{W} & \multicolumn{1}{r|}{L} & \multicolumn{1}{r|}{T} & \tabularnewline
+\hline
+\multirow{3}{*}{moa.classifiers.meta.AdaptiveRandomForest -s 20} & evaluation time (cpu seconds) & \multicolumn{1}{r|}{4} & \multicolumn{1}{r|}{0} & \multicolumn{1}{r|}{0} & \multicolumn{1}{r|}{0} & \multicolumn{1}{r|}{4} & \multicolumn{1}{r|}{0} & \multicolumn{1}{r|}{4} & \multicolumn{1}{r|}{0} & \multicolumn{1}{r|}{0} & \multicolumn{1}{r|}{4} & \multicolumn{1}{r|}{0} & \multicolumn{1}{r|}{0} & \multicolumn{1}{r|}{4} & \multicolumn{1}{r|}{0} & \multicolumn{1}{r|}{0} & \multicolumn{1}{r|}{4} & \multicolumn{1}{r|}{0} & \multicolumn{1}{r|}{0} & 198.40\tabularnewline
+ \cline{2-2} \cline{3-21}
+ & AUC & \multicolumn{1}{r|}{2} & \multicolumn{1}{r|}{0} & \multicolumn{1}{r|}{2} & \multicolumn{1}{r|}{2} & \multicolumn{1}{r|}{0} & \multicolumn{1}{r|}{2} & \multicolumn{1}{r|}{4} & \multicolumn{1}{r|}{0} & \multicolumn{1}{r|}{0} & \multicolumn{1}{r|}{2} & \multicolumn{1}{r|}{0} & \multicolumn{1}{r|}{2} & \multicolumn{1}{r|}{4} & \multicolumn{1}{r|}{0} & \multicolumn{1}{r|}{0} & \multicolumn{1}{r|}{3} & \multicolumn{1}{r|}{0} & \multicolumn{1}{r|}{1} & 0.99\tabularnewline
+ \cline{2-2} \cline{3-21}
+ & Accuracy & \multicolumn{1}{r|}{0} & \multicolumn{1}{r|}{0} & \multicolumn{1}{r|}{4} & \multicolumn{1}{r|}{0} & \multicolumn{1}{r|}{0} & \multicolumn{1}{r|}{4} & \multicolumn{1}{r|}{0} & \multicolumn{1}{r|}{0} & \multicolumn{1}{r|}{4} & \multicolumn{1}{r|}{0} & \multicolumn{1}{r|}{0} & \multicolumn{1}{r|}{4} & \multicolumn{1}{r|}{0} & \multicolumn{1}{r|}{0} & \multicolumn{1}{r|}{4} & \multicolumn{1}{r|}{0} & \multicolumn{1}{r|}{0} & \multicolumn{1}{r|}{4} & 1.00\tabularnewline
+ \cline{1-2} \cline{3-21}
+\multirow{3}{*}{moa.classifiers.meta.WeightedMajorityAlgorithm -l functions.SGD,meta.AdaptiveRandomForest} & evaluation time (cpu seconds) & \multicolumn{1}{r}{} & \multicolumn{1}{r}{} & \multicolumn{1}{r|}{} & \multicolumn{1}{r|}{0} & \multicolumn{1}{r|}{4} & \multicolumn{1}{r|}{0} & \multicolumn{1}{r|}{4} & \multicolumn{1}{r|}{0} & \multicolumn{1}{r|}{0} & \multicolumn{1}{r|}{0} & \multicolumn{1}{r|}{4} & \multicolumn{1}{r|}{0} & \multicolumn{1}{r|}{3} & \multicolumn{1}{r|}{1} & \multicolumn{1}{r|}{0} & \multicolumn{1}{r|}{4} & \multicolumn{1}{r|}{0} & \multicolumn{1}{r|}{0} & 155.42\tabularnewline
+ \cline{2-2} \cline{6-21}
+ & AUC & \multicolumn{1}{r}{} & \multicolumn{1}{r}{} & \multicolumn{1}{r|}{} & \multicolumn{1}{r|}{0} & \multicolumn{1}{r|}{1} & \multicolumn{1}{r|}{3} & \multicolumn{1}{r|}{4} & \multicolumn{1}{r|}{0} & \multicolumn{1}{r|}{0} & \multicolumn{1}{r|}{0} & \multicolumn{1}{r|}{1} & \multicolumn{1}{r|}{3} & \multicolumn{1}{r|}{2} & \multicolumn{1}{r|}{1} & \multicolumn{1}{r|}{1} & \multicolumn{1}{r|}{1} & \multicolumn{1}{r|}{1} & \multicolumn{1}{r|}{2} & 0.98\tabularnewline
+ \cline{2-2} \cline{6-21}
+ & Accuracy & \multicolumn{1}{r}{} & \multicolumn{1}{r}{} & \multicolumn{1}{r|}{} & \multicolumn{1}{r|}{0} & \multicolumn{1}{r|}{0} & \multicolumn{1}{r|}{4} & \multicolumn{1}{r|}{0} & \multicolumn{1}{r|}{0} & \multicolumn{1}{r|}{4} & \multicolumn{1}{r|}{0} & \multicolumn{1}{r|}{0} & \multicolumn{1}{r|}{4} & \multicolumn{1}{r|}{0} & \multicolumn{1}{r|}{0} & \multicolumn{1}{r|}{4} & \multicolumn{1}{r|}{0} & \multicolumn{1}{r|}{0} & \multicolumn{1}{r|}{4} & 1.00\tabularnewline
+ \cline{1-2} \cline{6-21}
+\multirow{3}{*}{moa.classifiers.meta.AdaptiveRandomForest -s 30} & evaluation time (cpu seconds) & \multicolumn{1}{r}{} & \multicolumn{1}{r}{} & \multicolumn{1}{r}{} & \multicolumn{1}{r}{} & \multicolumn{1}{r}{} & \multicolumn{1}{r|}{} & \multicolumn{1}{r|}{4} & \multicolumn{1}{r|}{0} & \multicolumn{1}{r|}{0} & \multicolumn{1}{r|}{4} & \multicolumn{1}{r|}{0} & \multicolumn{1}{r|}{0} & \multicolumn{1}{r|}{4} & \multicolumn{1}{r|}{0} & \multicolumn{1}{r|}{0} & \multicolumn{1}{r|}{4} & \multicolumn{1}{r|}{0} & \multicolumn{1}{r|}{0} & 256.40\tabularnewline
+ \cline{2-2} \cline{9-21}
+ & AUC & \multicolumn{1}{r}{} & \multicolumn{1}{r}{} & \multicolumn{1}{r}{} & \multicolumn{1}{r}{} & \multicolumn{1}{r}{} & \multicolumn{1}{r|}{} & \multicolumn{1}{r|}{4} & \multicolumn{1}{r|}{0} & \multicolumn{1}{r|}{0} & \multicolumn{1}{r|}{1} & \multicolumn{1}{r|}{0} & \multicolumn{1}{r|}{3} & \multicolumn{1}{r|}{2} & \multicolumn{1}{r|}{0} & \multicolumn{1}{r|}{2} & \multicolumn{1}{r|}{2} & \multicolumn{1}{r|}{0} & \multicolumn{1}{r|}{2} & 0.99\tabularnewline
+ \cline{2-2} \cline{9-21}
+ & Accuracy & \multicolumn{1}{r}{} & \multicolumn{1}{r}{} & \multicolumn{1}{r}{} & \multicolumn{1}{r}{} & \multicolumn{1}{r}{} & \multicolumn{1}{r|}{} & \multicolumn{1}{r|}{0} & \multicolumn{1}{r|}{0} & \multicolumn{1}{r|}{4} & \multicolumn{1}{r|}{0} & \multicolumn{1}{r|}{0} & \multicolumn{1}{r|}{4} & \multicolumn{1}{r|}{0} & \multicolumn{1}{r|}{0} & \multicolumn{1}{r|}{4} & \multicolumn{1}{r|}{0} & \multicolumn{1}{r|}{0} & \multicolumn{1}{r|}{4} & 1.00\tabularnewline
+ \cline{1-2} \cline{9-21}
+\multirow{3}{*}{moa.classifiers.meta.WeightedMajorityAlgorithm -l functions.SGD,trees.HoeffdingAdaptiveTree} & evaluation time (cpu seconds) & \multicolumn{1}{r}{} & \multicolumn{1}{r}{} & \multicolumn{1}{r}{} & \multicolumn{1}{r}{} & \multicolumn{1}{r}{} & \multicolumn{1}{r}{} & \multicolumn{1}{r}{} & \multicolumn{1}{r}{} & \multicolumn{1}{r|}{} & \multicolumn{1}{r|}{0} & \multicolumn{1}{r|}{4} & \multicolumn{1}{r|}{0} & \multicolumn{1}{r|}{0} & \multicolumn{1}{r|}{4} & \multicolumn{1}{r|}{0} & \multicolumn{1}{r|}{0} & \multicolumn{1}{r|}{4} & \multicolumn{1}{r|}{0} & 32.18\tabularnewline
+ \cline{2-2} \cline{12-21}
+ & AUC & \multicolumn{1}{r}{} & \multicolumn{1}{r}{} & \multicolumn{1}{r}{} & \multicolumn{1}{r}{} & \multicolumn{1}{r}{} & \multicolumn{1}{r}{} & \multicolumn{1}{r}{} & \multicolumn{1}{r}{} & \multicolumn{1}{r|}{} & \multicolumn{1}{r|}{0} & \multicolumn{1}{r|}{4} & \multicolumn{1}{r|}{0} & \multicolumn{1}{r|}{0} & \multicolumn{1}{r|}{3} & \multicolumn{1}{r|}{1} & \multicolumn{1}{r|}{0} & \multicolumn{1}{r|}{4} & \multicolumn{1}{r|}{0} & 0.96\tabularnewline
+ \cline{2-2} \cline{12-21}
+ & Accuracy & \multicolumn{1}{r}{} & \multicolumn{1}{r}{} & \multicolumn{1}{r}{} & \multicolumn{1}{r}{} & \multicolumn{1}{r}{} & \multicolumn{1}{r}{} & \multicolumn{1}{r}{} & \multicolumn{1}{r}{} & \multicolumn{1}{r|}{} & \multicolumn{1}{r|}{0} & \multicolumn{1}{r|}{0} & \multicolumn{1}{r|}{4} & \multicolumn{1}{r|}{0} & \multicolumn{1}{r|}{0} & \multicolumn{1}{r|}{4} & \multicolumn{1}{r|}{0} & \multicolumn{1}{r|}{0} & \multicolumn{1}{r|}{4} & 1.00\tabularnewline
+ \cline{1-2} \cline{12-21}
+\multirow{3}{*}{moa.classifiers.meta.WeightedMajorityAlgorithm -l trees.HoeffdingAdaptiveTree,meta.AdaptiveRandomForest} & evaluation time (cpu seconds) & \multicolumn{1}{r}{} & \multicolumn{1}{r}{} & \multicolumn{1}{r}{} & \multicolumn{1}{r}{} & \multicolumn{1}{r}{} & \multicolumn{1}{r}{} & \multicolumn{1}{r}{} & \multicolumn{1}{r}{} & \multicolumn{1}{r}{} & \multicolumn{1}{r}{} & \multicolumn{1}{r}{} & \multicolumn{1}{r|}{} & \multicolumn{1}{r|}{3} & \multicolumn{1}{r|}{1} & \multicolumn{1}{r|}{0} & \multicolumn{1}{r|}{4} & \multicolumn{1}{r|}{0} & \multicolumn{1}{r|}{0} & 182.35\tabularnewline
+ \cline{2-2} \cline{15-21}
+ & AUC & \multicolumn{1}{r}{} & \multicolumn{1}{r}{} & \multicolumn{1}{r}{} & \multicolumn{1}{r}{} & \multicolumn{1}{r}{} & \multicolumn{1}{r}{} & \multicolumn{1}{r}{} & \multicolumn{1}{r}{} & \multicolumn{1}{r}{} & \multicolumn{1}{r}{} & \multicolumn{1}{r}{} & \multicolumn{1}{r|}{} & \multicolumn{1}{r|}{2} & \multicolumn{1}{r|}{1} & \multicolumn{1}{r|}{1} & \multicolumn{1}{r|}{1} & \multicolumn{1}{r|}{0} & \multicolumn{1}{r|}{3} & 0.99\tabularnewline
+ \cline{2-2} \cline{15-21}
+ & Accuracy & \multicolumn{1}{r}{} & \multicolumn{1}{r}{} & \multicolumn{1}{r}{} & \multicolumn{1}{r}{} & \multicolumn{1}{r}{} & \multicolumn{1}{r}{} & \multicolumn{1}{r}{} & \multicolumn{1}{r}{} & \multicolumn{1}{r}{} & \multicolumn{1}{r}{} & \multicolumn{1}{r}{} & \multicolumn{1}{r|}{} & \multicolumn{1}{r|}{0} & \multicolumn{1}{r|}{0} & \multicolumn{1}{r|}{4} & \multicolumn{1}{r|}{0} & \multicolumn{1}{r|}{0} & \multicolumn{1}{r|}{4} & 1.00\tabularnewline
+ \cline{1-2} \cline{15-21}
+\multirow{3}{*}{moa.classifiers.meta.OzaBoost -l trees.HoeffdingAdaptiveTree -s 5} & evaluation time (cpu seconds) & \multicolumn{1}{r}{} & \multicolumn{1}{r}{} & \multicolumn{1}{r}{} & \multicolumn{1}{r}{} & \multicolumn{1}{r}{} & \multicolumn{1}{r}{} & \multicolumn{1}{r}{} & \multicolumn{1}{r}{} & \multicolumn{1}{r}{} & \multicolumn{1}{r}{} & \multicolumn{1}{r}{} & \multicolumn{1}{r}{} & \multicolumn{1}{r}{} & \multicolumn{1}{r}{} & \multicolumn{1}{r|}{} & \multicolumn{1}{r|}{3} & \multicolumn{1}{r|}{1} & \multicolumn{1}{r|}{0} & 136.92\tabularnewline
+ \cline{2-2} \cline{18-21}
+ & AUC & \multicolumn{1}{r}{} & \multicolumn{1}{r}{} & \multicolumn{1}{r}{} & \multicolumn{1}{r}{} & \multicolumn{1}{r}{} & \multicolumn{1}{r}{} & \multicolumn{1}{r}{} & \multicolumn{1}{r}{} & \multicolumn{1}{r}{} & \multicolumn{1}{r}{} & \multicolumn{1}{r}{} & \multicolumn{1}{r}{} & \multicolumn{1}{r}{} & \multicolumn{1}{r}{} & \multicolumn{1}{r|}{} & \multicolumn{1}{r|}{1} & \multicolumn{1}{r|}{1} & \multicolumn{1}{r|}{2} & 0.98\tabularnewline
+ \cline{2-2} \cline{18-21}
+ & Accuracy & \multicolumn{1}{r}{} & \multicolumn{1}{r}{} & \multicolumn{1}{r}{} & \multicolumn{1}{r}{} & \multicolumn{1}{r}{} & \multicolumn{1}{r}{} & \multicolumn{1}{r}{} & \multicolumn{1}{r}{} & \multicolumn{1}{r}{} & \multicolumn{1}{r}{} & \multicolumn{1}{r}{} & \multicolumn{1}{r}{} & \multicolumn{1}{r}{} & \multicolumn{1}{r}{} & \multicolumn{1}{r|}{} & \multicolumn{1}{r|}{0} & \multicolumn{1}{r|}{0} & \multicolumn{1}{r|}{4} & 1.00\tabularnewline
+ \cline{1-2} \cline{18-21}
+\multirow{3}{*}{moa.classifiers.meta.AdaptiveRandomForest} & evaluation time (cpu seconds) & \multicolumn{1}{r}{} & \multicolumn{1}{r}{} & \multicolumn{1}{r}{} & \multicolumn{1}{r}{} & \multicolumn{1}{r}{} & \multicolumn{1}{r}{} & \multicolumn{1}{r}{} & \multicolumn{1}{r}{} & \multicolumn{1}{r}{} & \multicolumn{1}{r}{} & \multicolumn{1}{r}{} & \multicolumn{1}{r}{} & \multicolumn{1}{r}{} & \multicolumn{1}{r}{} & \multicolumn{1}{r}{} & \multicolumn{1}{r}{} & \multicolumn{1}{r}{} & \multicolumn{1}{r|}{} & 107.93\tabularnewline
+ \cline{2-2} \cline{21-21}
+ & AUC & \multicolumn{1}{r}{} & \multicolumn{1}{r}{} & \multicolumn{1}{r}{} & \multicolumn{1}{r}{} & \multicolumn{1}{r}{} & \multicolumn{1}{r}{} & \multicolumn{1}{r}{} & \multicolumn{1}{r}{} & \multicolumn{1}{r}{} & \multicolumn{1}{r}{} & \multicolumn{1}{r}{} & \multicolumn{1}{r}{} & \multicolumn{1}{r}{} & \multicolumn{1}{r}{} & \multicolumn{1}{r}{} & \multicolumn{1}{r}{} & \multicolumn{1}{r}{} & \multicolumn{1}{r|}{} & 0.98\tabularnewline
+ \cline{2-2} \cline{21-21}
+ & Accuracy & \multicolumn{1}{r}{} & \multicolumn{1}{r}{} & \multicolumn{1}{r}{} & \multicolumn{1}{r}{} & \multicolumn{1}{r}{} & \multicolumn{1}{r}{} & \multicolumn{1}{r}{} & \multicolumn{1}{r}{} & \multicolumn{1}{r}{} & \multicolumn{1}{r}{} & \multicolumn{1}{r}{} & \multicolumn{1}{r}{} & \multicolumn{1}{r}{} & \multicolumn{1}{r}{} & \multicolumn{1}{r}{} & \multicolumn{1}{r}{} & \multicolumn{1}{r}{} & \multicolumn{1}{r|}{} & 1.00\tabularnewline
+ \cline{1-21}
+\end{tabular}\label{tab:addlabel}
+\end{sidewaystable}
+
+\end{document}
